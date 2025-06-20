@@ -22,7 +22,7 @@
   }).addTo(map);
 
   // Bloque correcto para cargar el GeoJSON
-  fetch('../data/hidrografia.geojson')
+  fetch('/data/hidrografia.geojson')
     .then(res => {
       console.log('Archivo cargado:', res);
       return res.json();
