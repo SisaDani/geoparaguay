@@ -7,7 +7,7 @@ export default function HomePage() {
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
-            <a href="#" className="text-sm hover:underline">Portal del Gobierno Paraguayo</a>
+            <a href="#" className="text-sm hover:underline"></a>
             <div className="flex space-x-4 text-sm">
               <a href="#" className="hover:underline">Acceso a la información</a>
               <a href="#" className="hover:underline">Participe</a>
