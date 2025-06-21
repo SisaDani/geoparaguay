@@ -1,212 +1,327 @@
-export default function Home() {
+import React from 'react';
+
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Top Government Bar */}
-      <div className="bg-blue-900 text-white text-sm">
-        <div className="container mx-auto px-4 py-2">
+    <div className="min-h-screen bg-white">
+      {/* Government Portal Header */}
+      <div className="bg-blue-900 text-white py-2">
+        <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-1">
-              <span className="font-bold">gov.py</span>
-            </div>
-            <div className="flex space-x-6">
-              <a href="#" className="hover:underline">ACCESO A LA INFORMACIÓN</a>
-              <a href="#" className="hover:underline">PARTICIPE</a>
-              <a href="#" className="hover:underline">LEGISLACIÓN</a>
-              <a href="#" className="hover:underline">ÓRGANOS DEL GOBIERNO</a>
+            <a href="#" className="text-sm hover:underline">Portal del Gobierno Paraguayo</a>
+            <div className="flex space-x-4 text-sm">
+              <a href="#" className="hover:underline">Acceso a la información</a>
+              <a href="#" className="hover:underline">Participe</a>
+              <a href="#" className="hover:underline">Legislación</a>
+              <a href="#" className="hover:underline">Órganos del Gobierno</a>
             </div>
           </div>
         </div>
       </div>
 
       {/* Main Header */}
-      <div className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex justify-between items-center">
+      <header className="bg-white shadow-sm border-b">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-3">
-                <img 
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjMDA2Q0JBIi8+Cjx0ZXh0IHg9IjMyIiB5PSI0MCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPklHUDwvdGV4dD4KPC9zdmc+Cg=="
-                  alt="IGP Logo" 
-                  className="w-16 h-16"
-                />
-                <div>
-                  <h1 className="text-2xl font-normal text-gray-700">Instituto Geográfico Paraguayo</h1>
-                </div>
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-lg">IGP</span>
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold text-gray-800">Instituto Geográfico Paraguayo</h1>
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <button className="p-2 rounded-full hover:bg-gray-100">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <path d="m21 21-4.35-4.35"></path>
-                </svg>
+              <button className="text-sm bg-gray-100 px-3 py-1 rounded">
+                Cambiar a modo de alto contraste
               </button>
-              <div className="flex items-center space-x-2">
-                <div className="flex items-center space-x-1 px-2 py-1 bg-green-100 rounded">
-                  <span className="text-sm">🇵🇾</span>
-                  <span className="text-sm">🇺🇸</span>
-                </div>
-                <div className="flex items-center space-x-1 px-2 py-1">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                    <path d="M2 12h20"></path>
-                  </svg>
-                  <span className="text-sm text-gray-600">Otros idiomas</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="6,9 12,15 18,9"></polyline>
-                  </svg>
-                </div>
+              <div className="flex space-x-2">
+                <button className="flex items-center space-x-1 px-3 py-1 bg-green-600 text-white rounded">
+                  <span>🇪🇸</span>
+                  <span>Español</span>
+                </button>
+                <button className="flex items-center space-x-1 px-3 py-1 bg-gray-200 text-gray-700 rounded">
+                  <span>🇺🇸</span>
+                  <span>English</span>
+                </button>
               </div>
             </div>
           </div>
           
-          {/* Menu Toggle and Search */}
-          <div className="flex items-center justify-between mt-4">
-            <div className="flex items-center space-x-4">
-              <button className="flex items-center space-x-2 text-gray-700">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="3" y1="6" x2="21" y2="6"></line>
-                  <line x1="3" y1="12" x2="21" y2="12"></line>
-                  <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-              </button>
-              <h2 className="text-xl font-semibold text-gray-800">Instituto Geográfico Paraguayo</h2>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="text-sm text-gray-500">Buscar</span>
-              <div className="relative">
+          {/* Search Bar */}
+          <div className="pb-4">
+            <div className="max-w-md">
+              <div className="flex">
                 <input 
                   type="text" 
-                  placeholder="Buscar"
-                  className="w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Buscar..."
+                  className="flex-1 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 text-blue-600">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                  </svg>
+                <button className="px-4 py-2 bg-blue-600 text-white rounded-r-md hover:bg-blue-700">
+                  🔍
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </header>
+
+      {/* Navigation */}
+      <nav className="bg-gray-50 border-b">
+        <div className="container mx-auto px-4">
+          <div className="flex space-x-8 py-3">
+            <div className="relative group">
+              <button className="text-gray-700 hover:text-blue-600 font-medium">Estadísticas</button>
+            </div>
+            <div className="relative group">
+              <button className="text-blue-600 font-medium bg-blue-50 px-3 py-1 rounded">Geociencias</button>
+            </div>
+            <div className="relative group">
+              <button className="text-gray-700 hover:text-blue-600 font-medium">Panel de Indicadores</button>
+            </div>
+            <div className="relative group">
+              <button className="text-gray-700 hover:text-blue-600 font-medium">Ciudades y Departamentos</button>
+            </div>
+            <div className="relative group">
+              <button className="text-gray-700 hover:text-blue-600 font-medium">Nuestros Sitios</button>
+            </div>
+          </div>
+        </div>
+      </nav>
 
       {/* Breadcrumb */}
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-3">
-          <nav className="flex items-center space-x-2 text-sm">
-            <a href="#" className="text-blue-600 hover:underline flex items-center">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-1">
-                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                <polyline points="9,22 9,12 15,12 15,22"></polyline>
-              </svg>
-            </a>
-            <span className="text-gray-400">›</span>
-            <a href="#" className="text-blue-600 hover:underline">Geociencias</a>
-            <span className="text-gray-400">›</span>
-            <a href="#" className="text-blue-600 hover:underline">Posicionamiento geodésico</a>
-            <span className="text-gray-400">›</span>
-            <span className="text-gray-700">Redes Geodésicas</span>
-          </nav>
+      <div className="bg-gray-100 py-3">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap gap-2 text-sm">
+            <a href="#" className="text-gray-600 hover:text-blue-600">Inicio</a>
+            <span className="text-gray-400">•</span>
+            <a href="#" className="text-gray-600 hover:text-blue-600">Geociencias</a>
+            <span className="text-gray-400">•</span>
+            <a href="#" className="text-gray-600 hover:text-blue-600">Informaciones sobre posicionamiento geodésico</a>
+            <span className="text-gray-400">•</span>
+            <span className="text-gray-600">Redes Geodésicas</span>
+            <span className="text-gray-400">•</span>
+            <a href="/mapa" className="text-blue-600 hover:text-blue-800 font-medium">🗺️ Ver Mapa Interactivo</a>
+          </div>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-6xl">
-          <h1 className="text-3xl font-bold text-blue-900 mb-6">Redes Geodésicas</h1>
+      <main className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6">Redes Geodésicas</h2>
           
-          {/* Description Section */}
-          <div className="mb-8">
-            <button className="flex items-center space-x-2 text-blue-600 hover:text-blue-800 mb-4">
-              <span className="font-semibold">Descripción</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="6,9 12,15 18,9"></polyline>
-              </svg>
-            </button>
+          <div className="bg-gray-50 p-6 rounded-lg mb-8">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center">
+                <span className="text-white text-sm">ℹ</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800">Descripción</h3>
+            </div>
+            <p className="text-gray-700 leading-relaxed">
+              Conjunto de informaciones planimétricas, altimétricas y gravimétricas referentes a las estaciones del 
+              Sistema Geodésico Paraguayo - SGP utilizadas para referencia en actividades de posicionamiento y a las 
+              demás estaciones establecidas por el IGP para corrección y verificación de imágenes del territorio.
+            </p>
           </div>
 
-          {/* Products Section */}
           <div className="mb-8">
-            <h2 className="text-xl font-semibold text-gray-800 mb-6">Principales productos de este tema:</h2>
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">Principales productos de este tema:</h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Product 1 */}
-              <div className="bg-white border-t-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-blue-900 mb-2">Mapa de las Redes del Sistema Geodésico Paraguayo</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                    <span className="text-green-600 text-lg">🗺️</span>
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-800">Mapa de las Redes del Sistema Geodésico Paraguayo</h4>
                 </div>
+                <p className="text-gray-600 text-sm">
+                  Visualización completa de todas las estaciones geodésicas del territorio nacional.
+                </p>
               </div>
 
-              {/* Product 2 */}
-              <div className="bg-white border-t-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-blue-900 mb-2">Red Altimétrica</h3>
+              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                    <span className="text-blue-600 text-lg">📏</span>
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-800">Red Altimétrica</h4>
                 </div>
+                <p className="text-gray-600 text-sm">
+                  Datos de elevación y referencias altimétricas del territorio paraguayo.
+                </p>
               </div>
 
-              {/* Product 3 */}
-              <div className="bg-white border-t-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-blue-900 mb-2">Red Gravimétrica</h3>
+              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                    <span className="text-purple-600 text-lg">⚖️</span>
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-800">Red Gravimétrica</h4>
                 </div>
+                <p className="text-gray-600 text-sm">
+                  Mediciones gravimétricas para estudios geodésicos y geofísicos.
+                </p>
               </div>
 
-              {/* Product 4 */}
-              <div className="bg-white border-t-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-blue-900 mb-2">BDG - Banco de datos geodésicos</h3>
+              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                    <span className="text-orange-600 text-lg">💾</span>
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-800">BDG - Banco de datos geodésicos</h4>
                 </div>
+                <p className="text-gray-600 text-sm">
+                  Base de datos centralizada con toda la información geodésica nacional.
+                </p>
               </div>
 
-              {/* Product 5 */}
-              <div className="bg-white border-t-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-blue-900 mb-2">RMPG - Red Mareográfica Permanente para Geodesia</h3>
+              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center">
+                    <span className="text-teal-600 text-lg">🌊</span>
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-800">RMPG - Red Mareográfica Permanente para Geodesia</h4>
                 </div>
+                <p className="text-gray-600 text-sm">
+                  Sistema de monitoreo permanente del nivel del mar para referencias geodésicas.
+                </p>
               </div>
 
-              {/* Product 6 */}
-              <div className="bg-white border-t-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-blue-900 mb-2">Red Planialtimétrica</h3>
+              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
+                    <span className="text-indigo-600 text-lg">📊</span>
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-800">Red Planialtimétrica</h4>
                 </div>
+                <p className="text-gray-600 text-sm">
+                  Coordenadas planimétricas y altimétricas de referencia nacional.
+                </p>
               </div>
 
-              {/* Product 7 */}
-              <div className="bg-white border-t-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-blue-900 mb-2">RBMC - Red Paraguaya de Monitoreo Continuo de Sistemas GNSS</h3>
+              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                    <span className="text-red-600 text-lg">📡</span>
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-800">RBMC - Red Paraguaya de Monitoreo Continuo de Sistemas GNSS</h4>
                 </div>
+                <p className="text-gray-600 text-sm">
+                  Red de estaciones de monitoreo continuo GPS/GNSS para posicionamiento preciso.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Feedback Section */}
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="flex items-center justify-between">
+              <span className="text-gray-700">¿Esta información fue útil?</span>
+              <div className="flex space-x-3">
+                <button className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors">
+                  Sí
+                </button>
+                <button className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition-colors">
+                  No
+                </button>
+              </div>
+            </div>
+            <div className="mt-4">
+              <p className="text-sm text-gray-600 mb-2">¿Qué podemos hacer para mejorar?</p>
+              <div className="flex space-x-2">
+                <input 
+                  type="text" 
+                  placeholder="Sus comentarios..."
+                  className="flex-1 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                  Enviar
+                </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white mt-16">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h4 className="font-bold mb-4">MÁS INFORMACIÓN</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="hover:text-blue-400">Estadísticas de Acceso al Sitio</a></li>
+                <li><a href="#" className="hover:text-blue-400">Encuesta de Evaluación de Servicios</a></li>
+                <li><a href="#" className="hover:text-blue-400">Transparencia y Rendición de Cuentas</a></li>
+                <li><a href="#" className="hover:text-blue-400">Licitaciones y Contratos</a></li>
+                <li><a href="#" className="hover:text-blue-400">Trabaje con Nosotros</a></li>
+                <li><a href="#" className="hover:text-blue-400">Enlaces</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-bold mb-4">REDES SOCIALES</h4>
+              <div className="flex space-x-3">
+                <a href="#" className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center hover:bg-blue-700">f</a>
+                <a href="#" className="w-8 h-8 bg-pink-600 rounded flex items-center justify-center hover:bg-pink-700">📷</a>
+                <a href="#" className="w-8 h-8 bg-black rounded flex items-center justify-center hover:bg-gray-700">🎵</a>
+                <a href="#" className="w-8 h-8 bg-blue-400 rounded flex items-center justify-center hover:bg-blue-500">🐦</a>
+                <a href="#" className="w-8 h-8 bg-red-600 rounded flex items-center justify-center hover:bg-red-700">▶️</a>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="font-bold mb-4">ATENCIÓN</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="hover:text-blue-400">Canales de Atención</a></li>
+                <li><a href="#" className="hover:text-blue-400">0800 123 4567</a></li>
+                <li><a href="#" className="hover:text-blue-400">Defensoría del Pueblo</a></li>
+              </ul>
+              
+              <h4 className="font-bold mb-4 mt-6">APPS IGP</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="hover:text-blue-400">Descargar para iPhone</a></li>
+                <li><a href="#" className="hover:text-blue-400">Descargar para Android</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-bold mb-4">TRANSPARENCIA</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="hover:text-blue-400">Acceso a la Información</a></li>
+                <li><a href="#" className="hover:text-blue-400">Portal de la Transparencia</a></li>
+              </ul>
+              
+              <h4 className="font-bold mb-4 mt-6">PRIVACIDAD</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="hover:text-blue-400">Términos de Uso y Política de Privacidad</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div className="flex space-x-4 mb-4 md:mb-0">
+              <a href="#" className="text-sm hover:text-blue-400">gov.py</a>
+              <a href="#" className="text-sm hover:text-blue-400">Acceso a la Información</a>
+              <a href="#" className="text-sm hover:text-blue-400">Participante del Programa Nacional de Prevención a la Corrupción</a>
+            </div>
+          </div>
+        </div>
+      </footer>
 
       {/* Cookie Notice */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg p-4 z-50">
+      <div className="fixed bottom-0 left-0 right-0 bg-blue-900 text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
-          <p className="text-sm text-gray-600">
-            Utilizamos cookies para mejorar su experiencia de navegación en el portal. Para saber más sobre cómo tratamos los datos personales, consulte nuestra{' '}
-            <a href="#" className="text-blue-600 hover:underline">Política de Privacidad</a>.
+          <p className="text-sm">
+            Utilizamos cookies para mejorar su experiencia de navegación en el portal. 
+            Para saber más sobre cómo tratamos los datos personales, consulte nuestra 
+            <a href="#" className="underline hover:text-blue-300">Política de Privacidad.</a>
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded font-medium">
+          <button className="bg-white text-blue-900 px-4 py-2 rounded font-medium hover:bg-gray-100">
             CONTINUAR
           </button>
         </div>
-      </div>
-
-      {/* Accessibility Widget */}
-      <div className="fixed bottom-4 right-4 z-50">
-        <button className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-        </button>
       </div>
     </div>
   );
